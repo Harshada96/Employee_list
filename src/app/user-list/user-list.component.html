@@ -1,0 +1,30 @@
+<table class="table-border">
+	<tr>
+		<th>Sr.No</th>
+		<th>Name</th>
+		<th>User Name</th>
+		<th>Email</th>
+	</tr>
+
+	<tr *ngFor="let data of users">
+
+		<td>{{data.id}}</td>
+		<td>{{data.name}}</td>
+		<td>{{data.username}}</td>
+		<td>{{data.email}}</td>
+	</tr>
+</table>
+
+<app-search #seach (sendName)="getName($event)"></app-search>
+
+<div *ngIf="userDetails!=null">
+<b>Display Data</b>
+<p><b>Name : {{userDetails.name}}</b></p>
+<p><b>UserName : {{userDetails.username}}</b></p>
+<p><b>Email : {{userDetails.email}}</b></p>
+<p><b>Phone : {{userDetails.phone}}</b></p>
+<p><b>Website : {{userDetails.website}}</b></p>
+<p><b>Address : {{userDetails.address.city}}</b></p>
+<p><b>Company : {{userDetails.company.name}}</b></p>
+<p><b>Address : {{userDetails.address.city}}</b></p>
+</div>
